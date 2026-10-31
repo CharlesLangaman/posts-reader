@@ -18,6 +18,10 @@ const railEdge = "sm:ml-20";
 const PostDetailsScreen = () => {
      const { postId } = useParams();
  const { isPending, isError, error, data, refetch } = usePost(Number(postId));
+    const year = data?.createdAt ? data.createdAt.slice(0, 4) : "";
+    <p className="text-sm text-muted-foreground">
+  Published in {year}
+</p>
  if (isPending)
  return (
  <div className="mt-12">
