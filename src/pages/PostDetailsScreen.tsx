@@ -1,5 +1,5 @@
 import { isAxiosError } from "axios";
-import { data, Link, useParams } from "react-router";
+import { Link, useParams } from "react-router";
 import Avatar from "@/components/avatar";
 import FormattedDate from "@/components/formatted-date";
 import { Button, buttonVariants } from "@/components/ui/button";
