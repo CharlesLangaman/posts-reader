@@ -40,10 +40,10 @@ ound">
  );
  return (
  <div className="mt-10 flex flex-col gap-3">
- {data.map((post) => (
- <PostRow post={post} key={post.id} />
- ))}
- </div>
+  {Array.isArray(data) && data.map((post) => (
+    <PostRow post={post} key={post.id} />
+  ))}
+</div>
  );
 };
 export default PostList;
