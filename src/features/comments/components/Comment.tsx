@@ -10,8 +10,7 @@ const CommentItem = ({ comment }: { comment: Comment }) => {
  <CardHeader>
  <div className="flex items-center gap-3">
  <Avatar>{initialOf(comment.email)}</Avatar>
- <h3 className="min-w-0 text-[0.9375rem] leading-snug font-medium tr
-acking-[-0.005em] first-letter:uppercase">
+ <h3 className="min-w-0 text-[0.9375rem] leading-snug font-medium tracking-[-0.005em] first-letter:uppercase">
  {comment.name}
  </h3>
  </div>

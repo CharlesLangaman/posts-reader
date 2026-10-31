@@ -7,8 +7,7 @@ const CommentList = ({ postId }: { postId: Comment["postId"] }) => {
  const { isPending, isError, error, data, refetch } = useComments(postId);
  return (
  <section className={`mt-16 border-t border-border pt-10 ${gutter}`}>
- <p className="text-sm tabular-nums text-muted-foreground sm:mt-0.5 sm:t
-ext-right">
+ <p className="text-sm tabular-nums text-muted-foreground sm:mt-0.5 sm:text-right">
  {data ? data.length : null}
  </p>
  <div className="min-w-0">
@@ -28,8 +27,7 @@ ext-right">
  )}
  {isError && (
  <div>
- <p className="text-[0.9375rem] leading-relaxed text-muted-foreg
-round">
+ <p className="text-[0.9375rem] leading-relaxed text-muted-foreground">
  {error.message}
  </p>
  <Button
