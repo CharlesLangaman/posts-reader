@@ -1,5 +1,5 @@
 import { isAxiosError } from "axios";
-import { Link, useParams } from "react-router";
+import { data, Link, useParams } from "react-router";
 import Avatar from "@/components/avatar";
 import FormattedDate from "@/components/formatted-date";
 import { Button, buttonVariants } from "@/components/ui/button";
@@ -7,6 +7,8 @@ import { Skeleton } from "@/components/ui/skeleton";
 import CommentList from "@/features/comments/components/CommentList";
 import { usePost } from "@/features/posts/posts.hooks";
 import { gutter } from "@/lib/layout";
+
+
 const toParagraphs = (body: string) =>
  body
  .split(/\n\s*\n/)
@@ -103,6 +105,8 @@ const PostDetailsScreen = () => {
  </article>
  <CommentList postId={data.id} />
  </>
+ 
  );
 };
+
 export default PostDetailsScreen;
